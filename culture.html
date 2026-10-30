@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бразилия: культура, история и разговорник</title>
+    <!-- Фавикон (если вы его добавили) -->
     <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Копируем базовые стили из text.html */
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
             background: #f4f7f2;
@@ -16,6 +18,7 @@
             line-height: 1.5;
             padding: 2rem 1rem;
         }
+
         .container {
             max-width: 1300px;
             margin: 0 auto;
@@ -25,65 +28,204 @@
             overflow: hidden;
             border: 1px solid #d9e6d4;
         }
+
         header {
             background: linear-gradient(135deg, #1e4d2b, #2a6e3a);
             color: white;
             padding: 2.5rem 2rem 2rem;
             position: relative;
         }
+
         .back-link {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            color: #f9c74f; text-decoration: none; font-weight: 600; font-size: 0.95rem;
-            margin-bottom: 1.2rem; background: rgba(0,0,0,0.25);
-            padding: 0.5rem 1rem; border-radius: 40px; transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #f9c74f;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            background: rgba(0,0,0,0.25);
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            transition: background 0.2s;
         }
         .back-link:hover { background: rgba(0,0,0,0.45); }
-        header h1 { font-size: 2.2rem; font-weight: 600; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
-        header h1 i { color: #f9c74f; font-size: 2rem; }
-        .subhead { margin-top: 0.6rem; font-size: 1.1rem; opacity: 0.9; border-left: 4px solid #f9c74f; padding-left: 1.2rem; }
-        
-        .nav-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem; padding: 1.8rem 2rem 0.5rem; background: #ffffff;
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
         }
+        header h1 i { font-size: 2rem; color: #f9c74f; }
+
+        .subhead {
+            margin-top: 0.6rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            border-left: 4px solid #f9c74f;
+            padding-left: 1.2rem;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 1.8rem 2rem 0.5rem;
+            background: #ffffff;
+        }
+
         .nav-card {
-            background: #f0f7ed; border-radius: 1.2rem; padding: 1.2rem;
-            border-left: 6px solid #2a6e3a; transition: all 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 0.3rem;
+            background: #f0f7ed;
+            border-radius: 1.2rem;
+            padding: 1.2rem 1.2rem 1rem;
+            border-left: 6px solid #2a6e3a;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
         }
         .nav-card i { font-size: 1.5rem; color: #1e4d2b; margin-bottom: 0.2rem; }
         .nav-card h3 { font-size: 1.1rem; font-weight: 600; }
         .nav-card p { font-size: 0.85rem; color: #2d4a2d; opacity: 0.8; }
-        .nav-card:hover { background: #e2efdd; transform: translateY(-3px); box-shadow: 0 8px 16px rgba(0, 60, 0, 0.1); }
-        
+        .nav-card:hover {
+            background: #e2efdd;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 60, 0, 0.1);
+        }
+
         .content { padding: 2rem 2rem 2.5rem; }
-        .section { margin-bottom: 3rem; scroll-margin-top: 1rem; }
+
+        .section { margin-bottom: 3.5rem; scroll-margin-top: 1rem; }
+
         .section h2 {
-            font-size: 1.9rem; font-weight: 600; color: #1e4d2b; display: flex; align-items: center; gap: 0.8rem;
-            margin-bottom: 1.5rem; border-bottom: 3px solid #c7e0bc; padding-bottom: 0.6rem;
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #1e4d2b;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #c7e0bc;
+            padding-bottom: 0.6rem;
         }
         .section h2 i { font-size: 1.9rem; }
-        .section h3 { font-size: 1.3rem; font-weight: 600; margin: 1.8rem 0 0.8rem; color: #1e4d2b; }
-        
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1rem 0 1.5rem; }
-        .info-card { background: #f9fcf7; border-radius: 1.2rem; padding: 1.3rem 1.4rem; border: 1px solid #deecda; }
-        .info-card i { font-size: 1.3rem; color: #2a6e3a; margin-right: 0.6rem; }
-        
-        .highlight { background: #fff6da; border-left: 6px solid #e6b422; padding: 0.9rem 1.2rem; border-radius: 0.8rem; margin: 1.2rem 0; font-size: 0.95rem; }
-        
+
+        .section h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.8rem 0 0.8rem;
+            color: #1e4d2b;
+        }
+
+        /* Стили для карточек */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+        .info-card {
+            background: #f9fcf7;
+            border-radius: 1.2rem;
+            padding: 1.3rem 1.4rem;
+            border: 1px solid #deecda;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+        .info-card i {
+            font-size: 1.3rem;
+            color: #2a6e3a;
+            margin-right: 0.6rem;
+            width: 1.8rem;
+            text-align: center;
+        }
+        .info-card strong { font-weight: 600; color: #1e3b1e; }
+
+        .highlight {
+            background: #fff6da;
+            border-left: 6px solid #e6b422;
+            padding: 0.9rem 1.2rem;
+            border-radius: 0.8rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        /* Стили для таблиц */
         .table-wrap { overflow-x: auto; margin: 1.2rem 0; }
-        table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #f9fcf7; border-radius: 1rem; overflow: hidden; }
-        th { background: #d9e6d4; color: #1a3a1a; font-weight: 600; padding: 0.8rem 1rem; text-align: left; }
-        td, th { padding: 0.7rem 1rem; border-bottom: 1px solid #e1ecdd; }
-        
-        footer { background: #1e3a1e; color: #cbdcc2; padding: 1.8rem 2rem; text-align: center; font-size: 0.9rem; border-top: 4px solid #f9c74f; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            background: #f9fcf7;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        th {
+            background: #d9e6d4;
+            color: #1a3a1a;
+            font-weight: 600;
+            padding: 0.8rem 1rem;
+            text-align: left;
+        }
+        td, th {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #e1ecdd;
+        }
+        tr:last-child td { border-bottom: none; }
+
+        /* Стили для картинок-заглушек */
+        .img-wrap {
+            margin: 1.5rem 0;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #deecda;
+            background: #f0f7ed;
+        }
+        .img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-height: 400px;
+        }
+        .img-caption {
+            background: #f0f7ed;
+            padding: 0.8rem 1.2rem;
+            font-size: 0.9rem;
+            color: #2a6e3a;
+            font-style: italic;
+            border-top: 1px solid #deecda;
+        }
+
+        footer {
+            background: #1e3a1e;
+            color: #cbdcc2;
+            padding: 1.8rem 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 4px solid #f9c74f;
+        }
+        footer i { color: #f9c74f; margin: 0 0.3rem; }
         footer a { color: #f9c74f; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
-        
+
         @media (max-width: 700px) {
             header h1 { font-size: 1.6rem; }
             .content { padding: 1.5rem 1.2rem; }
+            .nav-grid { padding: 1.2rem 1.2rem 0.2rem; }
             .section h2 { font-size: 1.5rem; }
+            .section h2 i { font-size: 1.5rem; }
         }
+
         html { scroll-behavior: smooth; }
     </style>
 </head>
@@ -103,11 +245,12 @@
         </div>
     </header>
 
+    <!-- Навигация по странице -->
     <div class="nav-grid">
         <a href="#history" class="nav-card">
             <i class="fas fa-landmark"></i>
             <h3>История</h3>
-            <p>От колонии до республики</p>
+            <p>От колонии до современности</p>
         </a>
         <a href="#culture" class="nav-card">
             <i class="fas fa-drum"></i>
@@ -115,7 +258,7 @@
             <p>Самба, футбол, обычаи</p>
         </a>
         <a href="#holidays" class="nav-card">
-            <i class="fas fa-calendar-star"></i>
+            <i class="fas fa-calendar-alt"></i>
             <h3>Праздники</h3>
             <p>Когда всё закрыто</p>
         </a>
@@ -127,7 +270,8 @@
     </div>
 
     <div class="content">
-        <!-- История -->
+
+        <!-- ========= ИСТОРИЯ ========= -->
         <section class="section" id="history">
             <h2><i class="fas fa-landmark"></i> История в двух словах</h2>
             <p>Бразилия — это уникальный сплав культур: португальской, африканской и коренной индейской. Чтобы понимать местных жителей, полезно знать ключевые вехи:</p>
@@ -142,23 +286,40 @@
             </ul>
 
             <h3><i class="fas fa-city"></i> Современная Бразилия (XXI век)</h3>
-            <ul style="padding-left: 20px; margin-bottom: 1rem; color: #2e4a2d;">
+            <ul style="padding-left: 20px; margin-bottom: 1.5rem; color: #2e4a2d;">
                 <li><strong>2000-е годы:</strong> Бразилия становится одной из крупнейших экономик мира и одним из основателей блока <strong>БРИКС</strong> (2009).</li>
                 <li><strong>2014 год:</strong> Страна принимает <strong>Чемпионат мира по футболу</strong>, что дало толчок развитию аэропортов и стадионов.</li>
                 <li><strong>2016 год:</strong> В Рио-де-Жанейро проходят <strong>Летние Олимпийские игры</strong> (первые в Южной Америке).</li>
-                <li><strong>2019–2022 годы:</strong> Период политической поляризации и экономических вызовов, усугубленных пандемией COVID-19.</li>
                 <li><strong>2023 год:</strong> К власти возвращается Луис Инасиу Лула да Силва. Страна берет курс на защиту экологии Амазонии.</li>
                 <li><strong>2024 год:</strong> Бразилия председательствует в G20 (саммит прошел в Рио-де-Жанейро).</li>
                 <li><strong>2025–2026 годы:</strong> Бразилия готовится принять климатический саммит <strong>ООН COP30</strong> в городе Белен (Амазония). Для туристов это означает повышенное внимание властей к безопасности и развитию инфраструктуры.</li>
             </ul>
 
+            <!-- МЕСТО ДЛЯ КАРТИНКИ: Архитектура Бразилиа -->
+            <div class="img-wrap">
+                <img src="history-architecture.jpg" alt="Национальный конгресс Бразилиа" style="background: #d9e6d4; min-height: 250px;">
+                <div class="img-caption">
+                    <i class="fas fa-camera"></i> <em>Сюда добавьте фото Национального конгресса в Бразилиа (архитектор Оскар Нимейер). Это символ современной истории и единственный город XX века, целиком внесенный в список ЮНЕСКО.</em>
+                </div>
+            </div>
+
             <div class="highlight">
                 <i class="fas fa-info-circle"></i> <strong>Что это значит для туриста:</strong> Благодаря крупным спортивным и политическим событиям последних 10 лет, Бразилия стала значительно более открытой для иностранцев: появилось больше англоговорящего персонала в отелях, улучшились аэропорты, а полиция в туристических центрах стала работать активнее. Однако социальное расслоение и вопросы безопасности по-прежнему остаются острыми.
             </div>
         </section>
-        <!-- Культура -->
+
+        <!-- ========= КУЛЬТУРА ========= -->
         <section class="section" id="culture">
             <h2><i class="fas fa-drum"></i> Культурный код</h2>
+            
+            <!-- МЕСТО ДЛЯ КАРТИНКИ: Карнавал -->
+            <div class="img-wrap">
+                <img src="culture-carnival.jpg" alt="Карнавал в Рио-де-Жанейро" style="background: #d9e6d4; min-height: 250px;">
+                <div class="img-caption">
+                    <i class="fas fa-camera"></i> <em>Сюда добавьте яркое фото с Карнавала в Рио-де-Жанейро или выступление школы самбы.</em>
+                </div>
+            </div>
+
             <div class="card-grid">
                 <div class="info-card">
                     <i class="fas fa-music"></i>
@@ -181,9 +342,18 @@
             </div>
         </section>
 
-        <!-- Праздники -->
+        <!-- ========= ПРАЗДНИКИ ========= -->
         <section class="section" id="holidays">
-            <h2><i class="fas fa-calendar-star"></i> Праздники и нерабочие дни</h2>
+            <h2><i class="fas fa-calendar-alt"></i> Праздники и нерабочие дни</h2>
+            
+            <!-- МЕСТО ДЛЯ КАРТИНКИ: Празднование на пляже -->
+            <div class="img-wrap">
+                <img src="holidays-celebration.jpg" alt="Праздник на Копакабане" style="background: #d9e6d4; min-height: 250px;">
+                <div class="img-caption">
+                    <i class="fas fa-camera"></i> <em>Сюда добавьте фото празднования Нового года на пляже Копакабана (люди в белом) или фейерверк.</em>
+                </div>
+            </div>
+
             <p>В эти дни банки, государственные учреждения и многие магазины могут быть закрыты. Цены на отели и билеты взлетают.</p>
             <div class="table-wrap">
                 <table>
@@ -203,7 +373,7 @@
             </div>
         </section>
 
-        <!-- Разговорник -->
+        <!-- ========= РАЗГОВОРНИК ========= -->
         <section class="section" id="phrasebook">
             <h2><i class="fas fa-language"></i> Мини-разговорник</h2>
             <p>Английский понимают в отелях и аэропортах, но знание нескольких фраз на португальском вызовет улыбку у любого местного жителя.</p>
@@ -235,5 +405,7 @@
     </footer>
 </div>
 
+</body>
+</html>
 </body>
 </html>
