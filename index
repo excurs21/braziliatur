@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бразилия: памятка туристу · экономическая, экологическая и социальная безопасность</title>
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #f4f7f2;
+            color: #1e2b1c;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 40, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid #d9e6d4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e4d2b, #2a6e3a);
+            color: white;
+            padding: 2.5rem 2rem 2rem;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        header h1 i {
+            font-size: 2rem;
+            color: #f9c74f;
+        }
+
+        .subhead {
+            margin-top: 0.6rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            border-left: 4px solid #f9c74f;
+            padding-left: 1.2rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            margin-top: 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 1.8rem 2rem 0.5rem;
+            background: #ffffff;
+        }
+
+        .nav-card {
+            background: #f0f7ed;
+            border-radius: 1.2rem;
+            padding: 1.2rem 1.2rem 1rem;
+            border-left: 6px solid #2a6e3a;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .nav-card i {
+            font-size: 1.5rem;
+            color: #1e4d2b;
+            margin-bottom: 0.2rem;
+        }
+
+        .nav-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .nav-card p {
+            font-size: 0.85rem;
+            color: #2d4a2d;
+            opacity: 0.8;
+        }
+
+        .nav-card:hover {
+            background: #e2efdd;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 60, 0, 0.1);
+        }
+
+        .content {
+            padding: 2rem 2rem 2.5rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 1rem;
+        }
+
+        .section h2 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #1e4d2b;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #c7e0bc;
+            padding-bottom: 0.6rem;
+        }
+
+        .section h2 i {
+            font-size: 1.9rem;
+        }
+
+        .section h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.8rem 0 0.8rem;
+            color: #1e4d2b;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .info-card {
+            background: #f9fcf7;
+            border-radius: 1.2rem;
+            padding: 1.3rem 1.4rem;
+            border: 1px solid #deecda;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .info-card i {
+            font-size: 1.3rem;
+            color: #2a6e3a;
+            margin-right: 0.6rem;
+            width: 1.8rem;
+            text-align: center;
+        }
+
+        .info-card strong {
+            font-weight: 600;
+            color: #1e3b1e;
+        }
+
+        .highlight {
+            background: #fff6da;
+            border-left: 6px solid #e6b422;
+            padding: 0.9rem 1.2rem;
+            border-radius: 0.8rem;
+            margin: 1.2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .danger-highlight {
+            background: #ffeae5;
+            border-left: 6px solid #c4452c;
+            padding: 0.9rem 1.2rem;
+            border-radius: 0.8rem;
+            margin: 1.2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .checklist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.8rem;
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            font-size: 0.97rem;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .checklist li i {
+            color: #2a6e3a;
+            width: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .badge-sm {
+            display: inline-block;
+            background: #1e4d2b;
+            color: white;
+            border-radius: 20px;
+            padding: 0.15rem 0.9rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            margin-right: 0.5rem;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 1.2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            background: #f9fcf7;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        th {
+            background: #d9e6d4;
+            color: #1a3a1a;
+            font-weight: 600;
+            padding: 0.8rem 1rem;
+            text-align: left;
+        }
+
+        td, th {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #e1ecdd;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .footnote {
+            font-size: 0.85rem;
+            color: #4e6b4a;
+            margin-top: 0.5rem;
+            border-top: 1px dashed #c0d6b8;
+            padding-top: 0.8rem;
+        }
+
+        .source-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.2rem;
+            font-size: 0.8rem;
+            color: #4e6b4a;
+            margin-top: 1rem;
+            list-style: none;
+        }
+
+        .source-list a {
+            color: #2a6e3a;
+            text-decoration: none;
+            border-bottom: 1px dotted #9bbd8f;
+        }
+
+        .source-list a:hover {
+            color: #1e4d2b;
+            border-bottom: 1px solid #1e4d2b;
+        }
+
+        footer {
+            background: #1e3a1e;
+            color: #cbdcc2;
+            padding: 1.8rem 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 4px solid #f9c74f;
+        }
+
+        footer i {
+            color: #f9c74f;
+            margin: 0 0.3rem;
+        }
+
+        @media (max-width: 700px) {
+            header h1 { font-size: 1.6rem; }
+            .content { padding: 1.5rem 1.2rem; }
+            .nav-grid { padding: 1.2rem 1.2rem 0.2rem; }
+            .section h2 { font-size: 1.5rem; }
+            .section h2 i { font-size: 1.5rem; }
+        }
+
+        /* Плавный скролл */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>
+            <i class="fas fa-umbrella-beach"></i>
+            Бразилия: памятка туристу
+        </h1>
+        <div class="subhead">
+            Экономическая, экологическая и социальная безопасность · по официальным рекомендациям МИД России, туроператоров Anex, Tez Travel и «Русский Экспресс».
+        </div>
+        <div class="badge">
+            <i class="fas fa-passport"></i> Безвиз до 90 дней · <i class="fas fa-calendar-alt"></i> Обновлено: 2026 год
+        </div>
+    </header>
+
+    <!-- Быстрая навигация -->
+    <div class="nav-grid">
+        <a href="#economic" class="nav-card">
+            <i class="fas fa-coins"></i>
+            <h3>Экономическая безопасность</h3>
+            <p>Деньги, таможня, транспорт, бюджет</p>
+        </a>
+        <a href="#ecological" class="nav-card">
+            <i class="fas fa-leaf"></i>
+            <h3>Экологическая безопасность</h3>
+            <p>Климат, здоровье, природа, эпидемии</p>
+        </a>
+        <a href="#social" class="nav-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Социальная безопасность</h3>
+            <p>Криминал, этикет, законы, быт</p>
+        </a>
+        <a href="#emergency" class="nav-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Экстренные контакты</h3>
+            <p>Службы, посольство, полиция</p>
+        </a>
+        <a href="#sources" class="nav-card">
+            <i class="fas fa-book-open"></i>
+            <h3>Источники</h3>
+            <p>Официальные рекомендации</p>
+        </a>
+    </div>
+
+    <div class="content">
+
+        <!-- ========= ЭКОНОМИЧЕСКАЯ БЕЗОПАСНОСТЬ ========= -->
+        <section class="section" id="economic">
+            <h2><i class="fas fa-coins"></i> Экономическая безопасность</h2>
+            <p style="margin-bottom: 1rem; font-size: 1.05rem;">Финансовая предусмотрительность, правильный выбор платёжных средств и транспорта — залог спокойного отдыха.</p>
+
+            <h3><i class="fas fa-money-bill-wave"></i> Валюта и платежи</h3>
+            <div class="card-grid">
+                <div class="info-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <strong>Бразильский реал (BRL, R$)</strong><br>
+                    Курс (сентябрь 2026): 1 R$ ≈ 18,19 руб.; 1 USD ≈ 5 R$.<br>
+                    <span class="badge-sm">важно</span> Карты «Мир» не принимаются. Работают Visa, MasterCard, American Express, Diners Club, а также UnionPay и карты других стран.
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-credit-card"></i>
+                    <strong>Безопасные банкоматы</strong><br>
+                    Снимайте наличные только в отделениях банков, ТЦ, отелях, днём. Избегайте уличных банкоматов.
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <strong>Время работы банков</strong><br>
+                    Банковские отделения обычно работают по будням с 10:00 до 16:00. Банкоматы (caixas eletrônicos) доступны круглосуточно или с 6:00 до 22:00.
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-wallet"></i>
+                    <strong>Наличные</strong><br>
+                    Минимум, распределите по разным карманам. Не демонстрируйте крупные суммы.
+                </div>
+            </div>
+
+            <h3><i class="fas fa-utensils"></i> Цены, бюджет и чаевые</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Статья</th><th>Ориентировочная стоимость</th></tr></thead>
+                    <tbody>
+                        <tr><td>Обед por quilo (по весу)</td><td>R$40–70 (8–14 USD)</td></tr>
+                        <tr><td>Prato Feito (PF) в кафе для местных</td><td>R$15–30 (3–6 USD)</td></tr>
+                        <tr><td>Ужин в обычном ресторане (на человека с напитками)</td><td>R$80–150 (16–30 USD)</td></tr>
+                        <tr><td>Уличная еда (pastel, coxinha)</td><td>R$10–25</td></tr>
+                        <tr><td>Бутылка воды 1,5 л / кофе / пиво 0,6 л</td><td>R$3–5 / R$10–14 / R$10–18</td></tr>
+                        <tr><td>Метро/автобус (разовый)</td><td>R$5–8 (1–1,5 USD)</td></tr>
+                        <tr><td>Uber / 99 (короткая поездка)</td><td>R$15–35 (3–7 USD)</td></tr>
+                        <tr><td>Междугородний автобус (Рио–Сан-Паулу)</td><td>R$150–250</td></tr>
+                        <tr><td>Внутренний авиабилет (при раннем бронировании)</td><td>от R$250–600 (50–120 USD)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><i class="fas fa-chart-line"></i> <strong>Средний дневной бюджет</strong> (без перелёта): бэкпекер — 35–50 USD, средний уровень — 80–130 USD, комфортный — 200–350 USD, премиум — от 500 USD. Бразилия — самая дорогая страна Южной Америки (цены в 1,26 раза выше российских).</p>
+            <p><i class="fas fa-hand-holding-usd"></i> <strong>Чаевые:</strong> в дорогих ресторанах 5–10% (часто включены в счет); в дешевых закусочных — 1–2 реала; носильщику — 1 реал; таксисту — округлить сумму.</p>
+
+            <div class="highlight">
+                <i class="fas fa-plane-departure"></i> <strong>Авиасообщение:</strong> Прямых рейсов из России в Бразилию в 2026 году нет. Перелёт с пересадкой (Стамбул, Дубай, Аддис-Абеба) занимает от 17 ч 40 мин до 50+ часов. Билеты туда-обратно: 120 000–200 000 руб. Стоимость тура: 200 000–300 000+ руб. Планируйте стыковку на внутренний рейс не менее 3–4 часов.
+            </div>
+
+            <h3><i class="fas fa-car"></i> Транспортная безопасность</h3>
+            <ul class="checklist">
+                <li><i class="fas fa-check-circle"></i> Только лицензированное такси, Uber или 99</li>
+                <li><i class="fas fa-check-circle"></i> Не пользоваться муниципальными автобусами ночью</li>
+                <li><i class="fas fa-check-circle"></i> Междугородние переезды — рейсовыми автобусами известных компаний (Gontijo, Itapemirim, Catedral)</li>
+                <li><i class="fas fa-check-circle"></i> Аренда авто — через международные прокатные компании (Localiza, Movida, Hertz), при наличии международных прав и кредитной карты</li>
+                <li><i class="fas fa-check-circle"></i> Не оставлять ценности в машине</li>
+            </ul>
+            <div class="danger-highlight">
+                <i class="fas fa-exclamation-triangle"></i> <strong>Важно:</strong> Нулевой уровень алкоголя в крови (Lei Seca) — любая концентрация влечёт штраф в пятикратном размере и приостановление прав на 12 месяцев. Выезд за пределы Бразилии на арендованном авто запрещен.
+            </div>
+
+            <h3><i class="fas fa-file-invoice-dollar"></i> Таможенные лимиты</h3>
+            <p>Беспошлинно: товары до 500 USD (авиа/море) или 300 USD (наземный транспорт). Сверх лимита в пределах 1000 USD — сбор 50% от превышения. Алкоголь — 2 л, сигареты — 400 шт. или 25 сигар, табак — 250 г. Наличные свыше 10 000 USD (или эквивалент) подлежат обязательной декларации.</p>
+            <p><strong>Запрещено к ввозу:</strong> наркотики, контрафакт, оружие, дикие животные и растения без разрешения IBAMA, ГМО, пестициды, <strong>электронные сигареты и вейпы</strong> (даже для личного пользования — конфискуют).</p>
+            <p><strong>Миграционная карта:</strong> заполняется при въезде. <strong>Не теряйте её!</strong> При выезде она понадобится, штраф за утерю — около 80 USD.</p>
+        </section>
+
+        <!-- ========= ЭКОЛОГИЧЕСКАЯ БЕЗОПАСНОСТЬ ========= -->
+        <section class="section" id="ecological">
+            <h2><i class="fas fa-leaf"></i> Экологическая безопасность</h2>
+            <p style="margin-bottom: 1rem; font-size: 1.05rem;">Тропический климат, дикая природа и эпидемиологические особенности требуют подготовки.</p>
+
+            <h3><i class="fas fa-temperature-high"></i> Климат и природные риски</h3>
+            <div class="card-grid">
+                <div class="info-card"><i class="fas fa-sun"></i> <strong>Высокая влажность и УФ-излучение</strong> — используйте солнцезащитные средства (SPF 30+), головные уборы, пейте больше воды.</div>
+                <div class="info-card"><i class="fas fa-water"></i> <strong>Сезон дождей (ноябрь–май)</strong> — наводнения, оползни, разрушение дорог. В южных штатах зимой (июнь–август) возможны заморозки.</div>
+                <div class="info-card"><i class="fas fa-fire"></i> <strong>Пожары (июль–октябрь)</strong> — особенно в Пантанале, Амазонии, Мату-Гроссу-ду-Сул. В 2024 году — крупные пожары с эвакуацией.</div>
+            </div>
+
+            <h3><i class="fas fa-disease"></i> Эпидемиологические риски</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Заболевание / риск</th><th>Регион / сезон</th><th>Профилактика</th></tr></thead>
+                    <tbody>
+                        <tr><td>Лихорадка денге</td><td>Юго-восток и Северо-восток, сезон дождей (ноябрь–май)</td><td>Репелленты (DEET ≥30%), закрытая одежда</td></tr>
+                        <tr><td>Малярия</td><td>Амазонский регион (Амазонас, Рорайма, Амапа, Пара и др.)</td><td>Москитные сетки, репелленты, профилактические препараты по назначению врача</td></tr>
+                        <tr><td>Вирус Зика, чикунгунья, лейшманиоз, гепатит В</td><td>Различные регионы</td><td>Защита от комаров, гигиена, вакцинация</td></tr>
+                        <tr><td>Жёлтая лихорадка</td><td>Амазония, Пантанал</td><td>Вакцинация не менее чем за 10 дней до поездки (рекомендована)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="highlight">
+                <i class="fas fa-syringe"></i> <strong>Вакцинация:</strong> рекомендуются прививки от гепатита A и B, брюшного тифа. Для въезда в Бразилию сертификат о вакцинации не требуется, за исключением прибывающих из стран риска жёлтой лихорадки (в течение последних 90 дней).
+            </div>
+            <p><i class="fas fa-tint"></i> <strong>Вода:</strong> водопроводную воду пить не рекомендуется — используйте бутилированную. Антибиотики без рецепта местного врача запрещены.</p>
+
+            <h3><i class="fas fa-spider"></i> Дикая природа и водные риски</h3>
+            <ul class="checklist">
+                <li><i class="fas fa-exclamation-circle"></i> Сильные течения на океанических пляжах</li>
+                <li><i class="fas fa-exclamation-circle"></i> Акулы у побережья Ресифи и Баии</li>
+                <li><i class="fas fa-exclamation-circle"></i> В Амазонии: пираньи, кайманы, отдалённость от медпомощи</li>
+                <li><i class="fas fa-exclamation-circle"></i> Ядовитые змеи, пауки (Phoneutria), скорпионы, клещи</li>
+                <li><i class="fas fa-check-circle" style="color:#2a6e3a;"></i> Купание только в зонах спасательной службы (Рио: Копакабана, Ипанема, Леблон)</li>
+            </ul>
+        </section>
+
+        <!-- ========= СОЦИАЛЬНАЯ БЕЗОПАСНОСТЬ ========= -->
+        <section class="section" id="social">
+            <h2><i class="fas fa-shield-alt"></i> Социальная безопасность</h2>
+            <p style="margin-bottom: 1rem; font-size: 1.05rem;">Высокий уровень уличной преступности в крупных городах требует повышенной бдительности, а знание местных законов, этикета и бытовых правил поможет избежать неприятностей.</p>
+
+            <h3><i class="fas fa-city"></i> Криминогенная обстановка</h3>
+            <div class="card-grid">
+                <div class="info-card"><i class="fas fa-exclamation-triangle" style="color:#c4452c;"></i> <strong>Города повышенного риска:</strong> Белен, Форталеза, Масейо, Порту-Алегри, Ресифи, Рио-де-Жанейро, Салвадор, Сан-Луис, Сан-Паулу.</div>
+                <div class="info-card"><i class="fas fa-map-marked-alt"></i> <strong>Запрещённые территории:</strong> фавелы (в любое время суток); зона 160 км от сухопутных границ (кроме Игуасу и Пантанала); «спутниковые города» Бразилиа с 18:00 до 06:00.</div>
+            </div>
+            <p>Распространены вооружённые ограбления, кражи, угоны автомобилей, «экспресс-похищения», карманные кражи, мошенничество с картами, ограбления на пляжах (arrastão). В безопасных районах Рио (Копакабана, Ипанема, Леблон, Лагоа) также сохраняйте бдительность.</p>
+
+            <h3><i class="fas fa-user-secret"></i> Поведение на улице и в барах</h3>
+            <ul class="checklist">
+                <li><i class="fas fa-check-circle"></i> Не демонстрировать достаток: дорогие часы, украшения, техника</li>
+                <li><i class="fas fa-check-circle"></i> Не считать деньги на людях, не оставлять вещи без присмотра</li>
+                <li><i class="fas fa-check-circle"></i> Не вступать в разговоры с незнакомцами, предлагающими «выгодные» услуги</li>
+                <li><i class="fas fa-check-circle"></i> При нападении — не оказывать сопротивления, передать ценности</li>
+                <li><i class="fas fa-check-circle"></i> Немедленно сообщить в полицию (190), настоять на протоколе, уведомить консульство</li>
+            </ul>
+            <div class="danger-highlight">
+                <i class="fas fa-skull-crossbones"></i> <strong>Скополамин («burundanga»)</strong> — подмешивают в напитки для ограбления. Никогда не оставляйте напитки без присмотра, не принимайте еду от незнакомых лиц, не ходите в ночные клубы в одиночку. В приложениях для знакомств высок риск стать жертвой ограбления.
+            </div>
+
+            <!-- ПЕРЕМЕЩЕННЫЙ ПУНКТ ПРО ЭЛЕКТРИЧЕСТВО И БЫТ -->
+            <h3><i class="fas fa-bolt"></i> Быт и проживание в отелях</h3>
+            <p><strong>Электричество:</strong> Напряжение в сети варьируется в зависимости от штата. В большинстве регионов (Сальвадор, Манаус) — 127 В. В Бразилиа, Санта-Катарине и северных штатах — 220 В. В Рио-де-Жанейро и Сан-Паулу — 110–127 В. Обязательно проверьте маркировку ваших приборов (Input: 100–240 В) и возьмите <strong>универсальный переходник</strong> (вилки бывают с плоскими и круглыми штырьками).</p>
+            <p><strong>Расчетный час:</strong> Заезд обычно с 14:00, выезд до 12:00. При позднем выезде взимается плата за полные сутки. Не выносите полотенца из номера на пляж или к бассейну.</p>
+
+            <h3><i class="fas fa-users"></i> Местный этикет и нормы поведения</h3>
+            <ul class="checklist">
+                <li><i class="fas fa-check-circle"></i> <strong>Приветствия:</strong> мужчины пожимают руки; женщины целуют в щеку (1 раз в Сан-Паулу, 2 — в Рио, 3 — в Минас-Жерайс).</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Язык:</strong> португальский. Не обращайтесь к местным на испанском без предупреждения — они могут воспринять это негативно.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Жесты:</strong> жест «ОК» (кольцо из пальцев) считается неприличным. Большой палец вверх — знак одобрения.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Одежда:</strong> на пляже — купальники, в городе — скромнее. В церквях и госучреждениях (Бразилиа) запрещены шорты и майки.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>За столом:</strong> едят ножом и вилкой даже фрукты. Не обсуждайте зарплату, возраст и религию без инициативы со стороны бразильца.</li>
+            </ul>
+
+            <h3><i class="fas fa-gavel"></i> Особые законы и ограничения</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Тема</th><th>Правило</th></tr></thead>
+                    <tbody>
+                        <tr><td>Вейпы и IQOS</td><td>Запрещены к ввозу и использованию. Полиция может конфисковать даже личные устройства.</td></tr>
+                        <tr><td>Курение</td><td>Запрещено в закрытых общественных местах (офисы, рестораны, бары, ТЦ, транспорт). Только в специально отведённых местах на открытом воздухе.</td></tr>
+                        <tr><td>Наркотики</td><td>Любые наркотические вещества запрещены. Полиция может изъять их и составить протокол.</td></tr>
+                        <tr><td>Дроны</td><td>До 250 г — без регистрации; свыше — обязательная регистрация в SISANT. Иностранцам нужен CPF.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3><i class="fas fa-passport"></i> Документы, имущество и экстренные случаи</h3>
+            <div class="card-grid">
+                <div class="info-card"><i class="fas fa-lock"></i> <strong>Документы:</strong> оригинал паспорта — в сейфе отеля. Копии — отдельно в багаже и при себе. Никому не отдавайте паспорт в залог.</div>
+                <div class="info-card"><i class="fas fa-mobile-alt"></i> <strong>Электроника:</strong> PIN-код и биометрия, активируйте удалённый поиск (Find My, Android Device Manager).</div>
+                <div class="info-card"><i class="fas fa-umbrella-beach"></i> <strong>На пляже:</strong> ценности — в сейфе отеля. Не оставляйте сумки без присмотра, не выходите на пляж в тёмное время.</div>
+            </div>
+            
+            <div class="highlight">
+                <i class="fas fa-exclamation-circle"></i> <strong>Если потеряли паспорт:</strong> немедленно обратитесь в консульство РФ. Потребуется заявление, 2 фото 35×45 мм и внутренний паспорт. Свидетельство на возвращение (REENTRY CERTIFICATE) выдается за 2 рабочих дня.
+            </div>
+            
+            <p><strong>Консульский учёт:</strong> Рекомендуется встать на учёт на портале <a href="https://brazil.mid.ru" target="_blank" style="color:#1e4d2b;">brazil.mid.ru</a>. Мобильное приложение МИД России «Зарубежный помощник» содержит рекомендации на случай инцидентов.</p>
+        </section>
+
+        <!-- ========= ЭКСТРЕННЫЕ КОНТАКТЫ ========= -->
+        <section class="section" id="emergency">
+            <h2><i class="fas fa-phone-alt"></i> Экстренные контакты</h2>
+            <p style="margin-bottom: 1rem; font-size: 1.05rem;">Сохраните эти номера заранее — в экстренной ситуации может быть не до поиска в интернете.</p>
+
+            <h3><i class="fas fa-ambulance"></i> Экстренные службы Бразилии</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Служба</th><th>Номер</th><th>Примечание</th></tr></thead>
+                    <tbody>
+                        <tr><td>Полиция (Polícia Militar)</td><td><strong>190</strong></td><td>Основной номер для экстренных ситуаций, связанных с безопасностью</td></tr>
+                        <tr><td>Скорая помощь (SAMU)</td><td><strong>192</strong></td><td>Медицинские emergencies, угрожающие жизни</td></tr>
+                        <tr><td>Пожарная охрана (Corpo de Bombeiros)</td><td><strong>193</strong></td><td>Пожары, спасение, ДТП</td></tr>
+                        <tr><td>Федеральная дорожная полиция (Polícia Rodoviária Federal)</td><td><strong>191</strong></td><td>Происшествия на федеральных трассах</td></tr>
+                        <tr><td>Гражданская полиция (Polícia Civil)</td><td><strong>197</strong></td><td>Подача заявлений о преступлениях, расследования</td></tr>
+                        <tr><td>Помощь женщинам (Central de Atendimento à Mulher)</td><td><strong>180</strong></td><td>Случаи насилия в отношении женщин</td></tr>
+                        <tr><td>Гражданская оборона (Defesa Civil)</td><td><strong>199</strong></td><td>Стихийные бедствия, наводнения, оползни</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3><i class="fas fa-building"></i> Дипломатические представительства РФ</h3>
+            <div class="card-grid">
+                <div class="info-card">
+                    <i class="fas fa-flag"></i>
+                    <strong>Посольство РФ в Бразилиа</strong><br>
+                    Адрес: Avenida das Nações, SES, lote A, Quadra 801, Brasília – DF, CEP 70476-900.<br>
+                    Телефон: <strong>+55 (61) 3223-30-94</strong><br>
+                    Консульский отдел: <strong>+55 (61) 3223-50-94</strong><br>
+                    E-mail: embaixada.russia@gmail.com
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-flag"></i>
+                    <strong>Генконсульство РФ в Рио-де-Жанейро</strong><br>
+                    Адрес: Rua Professor Azevedo Marques, 50 – Leblon, Rio de Janeiro – RJ, CEP 22450-030.<br>
+                    Телефон: <strong>+55 (21) 2274-00-97</strong><br>
+                    Дежурный телефон: <strong>+55 (21) 2274-00-97</strong><br>
+                    E-mail: consulrio@mid.ru
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-flag"></i>
+                    <strong>Генконсульство РФ в Сан-Паулу</strong><br>
+                    Адрес: Avenida Lineu de Paula Machado, 1366 – Jardim Everest, São Paulo – SP, CEP 05601-001.<br>
+                    Телефон: <strong>+55 (11) 3814-41-00</strong><br>
+                    Дежурный телефон: <strong>+55 (11) 3814-41-00</strong><br>
+                    E-mail: saopaulo@mid.ru
+                </div>
+            </div>
+
+            <h3><i class="fas fa-globe"></i> Экстренная помощь МИД России</h3>
+            <div class="highlight">
+                <i class="fas fa-phone"></i> <strong>Ситуационно-кризисный центр МИД России (ДСКЦ):</strong> <strong>+7 (495) 587-88-60</strong> (круглосуточно).<br>
+                <i class="fas fa-mobile-alt"></i> Мобильное приложение <strong>«Зарубежный помощник»</strong> — рекомендации и экстренная связь для российских граждан за рубежом.
+            </div>
+
+            <h3><i class="fas fa-user-shield"></i> Туристическая полиция (Delegacia do Turista)</h3>
+            <p>В крупных туристических центрах действуют специализированные отделения полиции, где помогают иностранным туристам (в том числе при потере документов и кражах).</p>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Город</th><th>Телефон</th><th>Адрес / примечание</th></tr></thead>
+                    <tbody>
+                        <tr><td>Рио-де-Жанейро (DEAT)</td><td><strong>(21) 2332-2924</strong></td><td>Avenida Afrânio de Melo Franco, 159 – Leblon</td></tr>
+                        <tr><td>Сан-Паулу (DEATUR)</td><td><strong>(11) 3257-4475</strong></td><td>Avenida Brigadeiro Tobias, 527 – 14º Andar</td></tr>
+                        <tr><td>Бразилиа</td><td><strong>(61) 3207-6655</strong></td><td>SGAN, 901, Lote A – Asa Norte</td></tr>
+                        <tr><td>Салвадор (DELTUR)</td><td><strong>(71) 3116-6817</strong></td><td>Praça Anchieta, 14 – Centro Histórico</td></tr>
+                        <tr><td>Ресифи (DPTUR)</td><td><strong>(81) 3184-3437</strong></td><td>Aeroporto Internacional dos Guararapes</td></tr>
+                        <tr><td>Форталеза (DEPROTUR)</td><td><strong>(85) 3101-2488</strong></td><td>Avenida Almirante Barroso, 805 – Praia de Iracema</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="footnote"><i class="fas fa-info-circle"></i> Если вы стали жертвой преступления, обращайтесь в ближайший полицейский участок или в туристическую полицию. При задержании или аресте требуйте kontakt с консульством РФ.</p>
+        </section>
+
+        <!-- ========= ИСТОЧНИКИ ========= -->
+        <section class="section" id="sources">
+            <h2><i class="fas fa-book-open"></i> Официальные источники и рекомендации</h2>
+            <p>Памятка составлена на основе следующих материалов:</p>
+            <ul class="source-list">
+                <li><a href="https://www.kdmid.ru/docs/brazil/information-about-the-country/" target="_blank">Консульский департамент МИД России (kdmid.ru)</a></li>
+                <li><a href="https://brazil.mid.ru/ru/braziliya/istoriya/" target="_blank">Посольство РФ в Бразилии</a></li>
+                <li><a href="https://sao-paulo.mid.ru/ru/o_brazilii/zdravookhranenie/" target="_blank">Генконсульство РФ в Сан-Паулу — здравоохранение</a></li>
+                <li><a href="https://customs.gov.ru/fiz/pravila-peremeshheniya-tovarov/" target="_blank">ФТС России — правила перемещения товаров</a></li>
+                <li><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/brazil-travel-advisory.html" target="_blank">Travel.state.gov — Brazil Travel Advisory</a></li>
+                <li><a href="https://www.gov.uk/foreign-travel-advice/brazil" target="_blank">GOV.UK — Brazil travel advice</a></li>
+                <li><a href="https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior/viagens-internacionais/guia-do-viajante/travellers-guide/arriving-in-brazill" target="_blank">Receita Federal do Brasil — Guia do Viajante</a></li>
+                <li><a href="https://www.rospotrebnadzor.ru/" target="_blank">Роспотребнадзор — профилактика жёлтой лихорадки</a></li>
+            </ul>
+            <p class="footnote"><i class="fas fa-info-circle"></i> Данная памятка носит информационный характер. Перед поездкой всегда сверяйтесь с актуальными данными на официальных ресурсах, а также с памятками туроператоров (Anex, Tez Travel, «Русский Экспресс»).</p>
+        </section>
+    </div>
+
+    <footer>
+        <i class="fas fa-map-signs"></i> Бразилия · практическое руководство по безопасности · 2026
+        <br><span style="opacity:0.7; font-size:0.8rem;">Сводная памятка на основе официальных документов и рекомендаций туроператоров</span>
+    </footer>
+</div>
+
+</body>
+</html>
