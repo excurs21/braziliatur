@@ -154,6 +154,72 @@
         .choice-card:hover .btn { background: #2a6e3a; }
         .choice-card.pdf:hover .btn { background: #a8361f; }
 
+                /* ====== БАННЕР КУЛЬТУРЫ ====== */
+        .culture-banner {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #1e4d2b, #2a6e3a);
+            color: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem 2rem;
+            text-decoration: none;
+            margin-bottom: 3rem;
+            transition: transform 0.25s, box-shadow 0.25s;
+            box-shadow: 0 8px 20px rgba(30, 77, 43, 0.15);
+            gap: 1.5rem;
+            border: 1px solid #1e4d2b;
+        }
+        .culture-banner:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(30, 77, 43, 0.3);
+            background: linear-gradient(135deg, #225633, #317f43);
+        }
+        .culture-banner .culture-icon {
+            font-size: 2.5rem;
+            color: #f9c74f;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .culture-banner .culture-text {
+            flex-grow: 1;
+        }
+        .culture-banner h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+            color: white;
+            font-weight: 700;
+        }
+        .culture-banner p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .culture-banner .culture-btn {
+            font-size: 1.5rem;
+            color: #f9c74f;
+            transition: transform 0.2s;
+        }
+        .culture-banner:hover .culture-btn {
+            transform: translateX(8px);
+        }
+        
+        /* Адаптив для мобильных */
+        @media (max-width: 600px) {
+            .culture-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.8rem 1.2rem;
+                gap: 1rem;
+            }
+            .culture-banner .culture-btn {
+                display: none; /* Скрываем стрелочку на телефонах для чистоты */
+            }
+            .culture-banner h3 { font-size: 1.2rem; }
+        }
+
         /* ====== ПРЕВЬЮ PDF ====== */
         .preview {
             background: #f0f7ed;
