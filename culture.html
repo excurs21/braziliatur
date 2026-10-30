@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бразилия: культура, история и разговорник</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Копируем базовые стили из text.html */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #f4f7f2;
+            color: #1e2b1c;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 40, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid #d9e6d4;
+        }
+        header {
+            background: linear-gradient(135deg, #1e4d2b, #2a6e3a);
+            color: white;
+            padding: 2.5rem 2rem 2rem;
+            position: relative;
+        }
+        .back-link {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            color: #f9c74f; text-decoration: none; font-weight: 600; font-size: 0.95rem;
+            margin-bottom: 1.2rem; background: rgba(0,0,0,0.25);
+            padding: 0.5rem 1rem; border-radius: 40px; transition: background 0.2s;
+        }
+        .back-link:hover { background: rgba(0,0,0,0.45); }
+        header h1 { font-size: 2.2rem; font-weight: 600; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+        header h1 i { color: #f9c74f; font-size: 2rem; }
+        .subhead { margin-top: 0.6rem; font-size: 1.1rem; opacity: 0.9; border-left: 4px solid #f9c74f; padding-left: 1.2rem; }
+        
+        .nav-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem; padding: 1.8rem 2rem 0.5rem; background: #ffffff;
+        }
+        .nav-card {
+            background: #f0f7ed; border-radius: 1.2rem; padding: 1.2rem;
+            border-left: 6px solid #2a6e3a; transition: all 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 0.3rem;
+        }
+        .nav-card i { font-size: 1.5rem; color: #1e4d2b; margin-bottom: 0.2rem; }
+        .nav-card h3 { font-size: 1.1rem; font-weight: 600; }
+        .nav-card p { font-size: 0.85rem; color: #2d4a2d; opacity: 0.8; }
+        .nav-card:hover { background: #e2efdd; transform: translateY(-3px); box-shadow: 0 8px 16px rgba(0, 60, 0, 0.1); }
+        
+        .content { padding: 2rem 2rem 2.5rem; }
+        .section { margin-bottom: 3rem; scroll-margin-top: 1rem; }
+        .section h2 {
+            font-size: 1.9rem; font-weight: 600; color: #1e4d2b; display: flex; align-items: center; gap: 0.8rem;
+            margin-bottom: 1.5rem; border-bottom: 3px solid #c7e0bc; padding-bottom: 0.6rem;
+        }
+        .section h2 i { font-size: 1.9rem; }
+        .section h3 { font-size: 1.3rem; font-weight: 600; margin: 1.8rem 0 0.8rem; color: #1e4d2b; }
+        
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1rem 0 1.5rem; }
+        .info-card { background: #f9fcf7; border-radius: 1.2rem; padding: 1.3rem 1.4rem; border: 1px solid #deecda; }
+        .info-card i { font-size: 1.3rem; color: #2a6e3a; margin-right: 0.6rem; }
+        
+        .highlight { background: #fff6da; border-left: 6px solid #e6b422; padding: 0.9rem 1.2rem; border-radius: 0.8rem; margin: 1.2rem 0; font-size: 0.95rem; }
+        
+        .table-wrap { overflow-x: auto; margin: 1.2rem 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #f9fcf7; border-radius: 1rem; overflow: hidden; }
+        th { background: #d9e6d4; color: #1a3a1a; font-weight: 600; padding: 0.8rem 1rem; text-align: left; }
+        td, th { padding: 0.7rem 1rem; border-bottom: 1px solid #e1ecdd; }
+        
+        footer { background: #1e3a1e; color: #cbdcc2; padding: 1.8rem 2rem; text-align: center; font-size: 0.9rem; border-top: 4px solid #f9c74f; }
+        footer a { color: #f9c74f; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        
+        @media (max-width: 700px) {
+            header h1 { font-size: 1.6rem; }
+            .content { padding: 1.5rem 1.2rem; }
+            .section h2 { font-size: 1.5rem; }
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> На главную
+        </a>
+        <h1>
+            <i class="fas fa-mask"></i>
+            Культура, история и разговорник
+        </h1>
+        <div class="subhead">
+            Всё, что нужно знать о Бразилии, кроме правил безопасности. Погрузитесь в атмосферу страны перед поездкой.
+        </div>
+    </header>
+
+    <div class="nav-grid">
+        <a href="#history" class="nav-card">
+            <i class="fas fa-landmark"></i>
+            <h3>История</h3>
+            <p>От колонии до республики</p>
+        </a>
+        <a href="#culture" class="nav-card">
+            <i class="fas fa-drum"></i>
+            <h3>Культурный код</h3>
+            <p>Самба, футбол, обычаи</p>
+        </a>
+        <a href="#holidays" class="nav-card">
+            <i class="fas fa-calendar-star"></i>
+            <h3>Праздники</h3>
+            <p>Когда всё закрыто</p>
+        </a>
+        <a href="#phrasebook" class="nav-card">
+            <i class="fas fa-language"></i>
+            <h3>Разговорник</h3>
+            <p>Португальский для туриста</p>
+        </a>
+    </div>
+
+    <div class="content">
+        <!-- История -->
+        <section class="section" id="history">
+            <h2><i class="fas fa-landmark"></i> История в двух словах</h2>
+            <p>Бразилия — это уникальный сплав культур: португальской, африканской и коренной индейской. Чтобы понимать местных жителей, полезно знать ключевые вехи:</p>
+            
+            <ul style="padding-left: 20px; margin-bottom: 1rem; color: #2e4a2d;">
+                <li><strong>1500 год:</strong> Португалец Педру Кабрал открывает Бразилию.</li>
+                <li><strong>1530–1822:</strong> Колониальный период. На северо-востоке выращивают сахарный тростник, для чего массово завозят рабов из Африки.</li>
+                <li><strong>1822 год:</strong> Провозглашение независимости от Португалии.</li>
+                <li><strong>1888 год:</strong> Отмена рабства («Золотой закон»).</li>
+                <li><strong>1964–1985:</strong> Период военной диктатуры.</li>
+                <li><strong>1988 год:</strong> Принятие действующей Конституции. Сегодня Бразилия — президентская республика.</li>
+            </ul>
+
+            <h3><i class="fas fa-city"></i> Современная Бразилия (XXI век)</h3>
+            <ul style="padding-left: 20px; margin-bottom: 1rem; color: #2e4a2d;">
+                <li><strong>2000-е годы:</strong> Бразилия становится одной из крупнейших экономик мира и одним из основателей блока <strong>БРИКС</strong> (2009).</li>
+                <li><strong>2014 год:</strong> Страна принимает <strong>Чемпионат мира по футболу</strong>, что дало толчок развитию аэропортов и стадионов.</li>
+                <li><strong>2016 год:</strong> В Рио-де-Жанейро проходят <strong>Летние Олимпийские игры</strong> (первые в Южной Америке).</li>
+                <li><strong>2019–2022 годы:</strong> Период политической поляризации и экономических вызовов, усугубленных пандемией COVID-19.</li>
+                <li><strong>2023 год:</strong> К власти возвращается Луис Инасиу Лула да Силва. Страна берет курс на защиту экологии Амазонии.</li>
+                <li><strong>2024 год:</strong> Бразилия председательствует в G20 (саммит прошел в Рио-де-Жанейро).</li>
+                <li><strong>2025–2026 годы:</strong> Бразилия готовится принять климатический саммит <strong>ООН COP30</strong> в городе Белен (Амазония). Для туристов это означает повышенное внимание властей к безопасности и развитию инфраструктуры.</li>
+            </ul>
+
+            <div class="highlight">
+                <i class="fas fa-info-circle"></i> <strong>Что это значит для туриста:</strong> Благодаря крупным спортивным и политическим событиям последних 10 лет, Бразилия стала значительно более открытой для иностранцев: появилось больше англоговорящего персонала в отелях, улучшились аэропорты, а полиция в туристических центрах стала работать активнее. Однако социальное расслоение и вопросы безопасности по-прежнему остаются острыми.
+            </div>
+        </section>
+        <!-- Культура -->
+        <section class="section" id="culture">
+            <h2><i class="fas fa-drum"></i> Культурный код</h2>
+            <div class="card-grid">
+                <div class="info-card">
+                    <i class="fas fa-music"></i>
+                    <strong>Карнавал и Самба</strong><br>
+                    Крупнейший праздник в мире. Самба — музыкальный символ страны. Школы самбы готовятся к параду весь год.
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-futbol"></i>
+                    <strong>Футбол</strong><br>
+                    Это религия. Бразилия — пятикратный чемпион мира (1958, 1962, 1970, 1994, 2002).
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-hand-rock"></i>
+                    <strong>Капоэйра</strong><br>
+                    Боевое искусство, сочетающее акробатику, танец и музыку. Внесено в список наследия ЮНЕСКО.
+                </div>
+            </div>
+            <div class="highlight">
+                <i class="fas fa-comment-slash"></i> <strong>Важный нюанс:</strong> Никогда не начинайте общение с бразильцами на испанском языке. Они могут воспринять это как неуважение к их культуре. Лучше использовать базовый португальский или английский.
+            </div>
+        </section>
+
+        <!-- Праздники -->
+        <section class="section" id="holidays">
+            <h2><i class="fas fa-calendar-star"></i> Праздники и нерабочие дни</h2>
+            <p>В эти дни банки, государственные учреждения и многие магазины могут быть закрыты. Цены на отели и билеты взлетают.</p>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Дата</th><th>Праздник</th><th>Примечание</th></tr></thead>
+                    <tbody>
+                        <tr><td>1 января</td><td>Новый год</td><td>Всё закрыто</td></tr>
+                        <tr><td>Февраль–март</td><td>Карнавал</td><td>Пик туристического сезона, цены максимальные</td></tr>
+                        <tr><td>21 апреля</td><td>Тирадентис</td><td>Национальный герой</td></tr>
+                        <tr><td>1 мая</td><td>День труда</td><td></td></tr>
+                        <tr><td>7 сентября</td><td>День независимости</td><td>Военные парады</td></tr>
+                        <tr><td>12 октября</td><td>День Богоматери Апаресиды</td><td>Покровительница Бразилии</td></tr>
+                        <tr><td>2 ноября</td><td>День всех святых</td><td></td></tr>
+                        <tr><td>15 ноября</td><td>День Республики</td><td></td></tr>
+                        <tr><td>25 декабря</td><td>Рождество</td><td>Семейный праздник</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Разговорник -->
+        <section class="section" id="phrasebook">
+            <h2><i class="fas fa-language"></i> Мини-разговорник</h2>
+            <p>Английский понимают в отелях и аэропортах, но знание нескольких фраз на португальском вызовет улыбку у любого местного жителя.</p>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Фраза</th><th>Португальский</th><th>Транскрипция</th></tr></thead>
+                    <tbody>
+                        <tr><td>Доброе утро / день</td><td>Bom dia</td><td>Бон джиа</td></tr>
+                        <tr><td>Добрый вечер</td><td>Boa noite</td><td>Боа нойчи</td></tr>
+                        <tr><td>Спасибо (муж.) / (жен.)</td><td>Obrigado / Obrigada</td><td>Обригаду / Обригада</td></tr>
+                        <tr><td>Пожалуйста</td><td>Por favor</td><td>Пор фавор</td></tr>
+                        <tr><td>Сколько стоит?</td><td>Quanto custa?</td><td>Кванту куста?</td></tr>
+                        <tr><td>Я не понимаю</td><td>Não entendo</td><td>Нау энтенду</td></tr>
+                        <tr><td>Вы говорите по-английски?</td><td>Você fala inglês?</td><td>Восэ фала инглес?</td></tr>
+                        <tr><td>Помогите!</td><td>Socorro!</td><td>Сокорру!</td></tr>
+                        <tr><td>Вкусно!</td><td>Delicioso!</td><td>Делисиозу!</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <i class="fas fa-map-signs"></i> Бразилия · культурный гид · 2026
+        <br>
+        <a href="index.html" style="margin-top: 10px; display: inline-block;">
+            <i class="fas fa-arrow-left"></i> Вернуться на главную
+        </a>
+    </footer>
+</div>
+
+</body>
+</html>
