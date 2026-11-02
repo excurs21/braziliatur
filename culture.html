@@ -27,11 +27,15 @@
             border: 1px solid #d9e6d4;
         }
 
+        /* ОБНОВЛЕННАЯ ШАПКА С ВОДОПАДОМ */
         header {
-            background: linear-gradient(135deg, #1e4d2b, #2a6e3a);
+            background: linear-gradient(to bottom, rgba(30, 77, 43, 0.95) 0%, rgba(30, 77, 43, 0.6) 100%),
+                        url('https://images.unsplash.com/photo-1589906493606-a6ca2a6a1c62?auto=format&fit=crop&w=1920&q=80')
+                        center/cover no-repeat;
             color: white;
-            padding: 2.5rem 2rem 2rem;
+            padding: 3rem 2rem 4rem;
             position: relative;
+            border-bottom: 4px solid #f9c74f;
         }
 
         .back-link {
@@ -43,12 +47,12 @@
             font-weight: 600;
             font-size: 0.95rem;
             margin-bottom: 1.2rem;
-            background: rgba(0,0,0,0.25);
+            background: rgba(0,0,0,0.4);
             padding: 0.5rem 1rem;
             border-radius: 40px;
             transition: background 0.2s;
         }
-        .back-link:hover { background: rgba(0,0,0,0.45); }
+        .back-link:hover { background: rgba(0,0,0,0.7); }
 
         header h1 {
             font-size: 2.2rem;
@@ -58,16 +62,18 @@
             align-items: center;
             gap: 0.75rem;
             flex-wrap: wrap;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
         }
         header h1 i { font-size: 2rem; color: #f9c74f; }
 
         .subhead {
             margin-top: 0.6rem;
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.95;
             max-width: 800px;
             border-left: 4px solid #f9c74f;
             padding-left: 1.2rem;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
         }
 
         .nav-grid {
@@ -177,7 +183,6 @@
         }
         tr:last-child td { border-bottom: none; }
 
-        /* Стили для картинок-заглушек */
         .img-wrap {
             margin: 1.5rem 0;
             border-radius: 1.2rem;
