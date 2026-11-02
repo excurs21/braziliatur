@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бразилия — Памятка туристу</title>
-    <!-- ВОТ ЭТА СТРОКА ДЛЯ ФАВИКОНА -->
+    <!-- Фавикон -->
     <link rel="icon" type="image/png" href="favicon.png">
     
     <!-- Font Awesome для иконок -->
@@ -55,6 +55,7 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
         }
         header .badge {
             display: inline-block;
@@ -90,7 +91,7 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-bottom: 3rem;
-            max-width: 900px; /* Ограничиваем ширину, чтобы две карточки не были огромными */
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -116,27 +117,14 @@
             width: 6px; height: 100%;
             background: #2a6e3a;
         }
-        .choice-card.pdf::before { background: #c4452c; }
         .choice-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(30, 77, 43, 0.12);
             border-color: #b9d8af;
         }
-        .choice-card i {
-            font-size: 2.5rem;
-            color: #2a6e3a;
-        }
-        .choice-card.pdf i { color: #c4452c; }
-        .choice-card h3 {
-            font-size: 1.4rem;
-            color: #1e4d2b;
-            font-weight: 700;
-        }
-        .choice-card p {
-            color: #5a6b57;
-            font-size: 0.95rem;
-            flex-grow: 1;
-        }
+        .choice-card i { font-size: 2.5rem; color: #2a6e3a; }
+        .choice-card h3 { font-size: 1.4rem; color: #1e4d2b; font-weight: 700; }
+        .choice-card p { color: #5a6b57; font-size: 0.95rem; flex-grow: 1; }
         .choice-card .btn {
             display: inline-flex;
             align-items: center;
@@ -150,78 +138,7 @@
             margin-top: 0.5rem;
             transition: background 0.2s;
         }
-        .choice-card.pdf .btn {
-            background: #c4452c;
-            color: white;
-        }
         .choice-card:hover .btn { background: #2a6e3a; }
-        .choice-card.pdf:hover .btn { background: #a8361f; }
-
-                /* ====== БАННЕР КУЛЬТУРЫ ====== */
-        .culture-banner {
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #1e4d2b, #2a6e3a);
-            color: white;
-            border-radius: 1.5rem;
-            padding: 1.5rem 2rem;
-            text-decoration: none;
-            margin-bottom: 3rem;
-            transition: transform 0.25s, box-shadow 0.25s;
-            box-shadow: 0 8px 20px rgba(30, 77, 43, 0.15);
-            gap: 1.5rem;
-            border: 1px solid #1e4d2b;
-        }
-        .culture-banner:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 25px rgba(30, 77, 43, 0.3);
-            background: linear-gradient(135deg, #225633, #317f43);
-        }
-        .culture-banner .culture-icon {
-            font-size: 2.5rem;
-            color: #f9c74f;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 1rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .culture-banner .culture-text {
-            flex-grow: 1;
-        }
-        .culture-banner h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.3rem;
-            color: white;
-            font-weight: 700;
-        }
-        .culture-banner p {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.85);
-        }
-        .culture-banner .culture-btn {
-            font-size: 1.5rem;
-            color: #f9c74f;
-            transition: transform 0.2s;
-        }
-        .culture-banner:hover .culture-btn {
-            transform: translateX(8px);
-        }
-        
-        /* Адаптив для мобильных */
-        @media (max-width: 600px) {
-            .culture-banner {
-                flex-direction: column;
-                text-align: center;
-                padding: 1.8rem 1.2rem;
-                gap: 1rem;
-            }
-            .culture-banner .culture-btn {
-                display: none; /* Скрываем стрелочку на телефонах для чистоты */
-            }
-            .culture-banner h3 { font-size: 1.2rem; }
-        }
 
         /* ====== ПРЕВЬЮ PDF ====== */
         .preview {
@@ -255,10 +172,7 @@
             transition: transform 0.3s;
         }
         .preview-img-wrap:hover { transform: scale(1.03) rotate(-1deg); }
-        .preview-img-wrap img {
-            width: 100%;
-            display: block;
-        }
+        .preview-img-wrap img { width: 100%; display: block; }
         .preview .download-link {
             display: inline-flex;
             align-items: center;
@@ -275,10 +189,8 @@
         }
         .preview .download-link:hover { background: #a8361f; }
 
-        /* ====== ЭКСТРЕННЫЕ КОНТАКТЫ (внизу) ====== */
-        .emergency-section {
-            margin-bottom: 2.5rem;
-        }
+        /* ====== ЭКСТРЕННЫЕ КОНТАКТЫ ====== */
+        .emergency-section { margin-bottom: 2.5rem; }
         .emergency-strip {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -295,7 +207,7 @@
             box-shadow: 0 4px 10px rgba(196, 69, 44, 0.08);
         }
         .emergency-card .num {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 800;
             color: #c4452c;
             display: block;
@@ -312,10 +224,7 @@
         }
 
         /* ====== SHARE ====== */
-        .share-block {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
+        .share-block { text-align: center; margin-bottom: 1rem; }
         .share-btn {
             background: linear-gradient(135deg, #2a6e3a, #1e4d2b);
             color: white;
@@ -338,7 +247,7 @@
         }
         .share-btn i { color: #f9c74f; }
 
-        /* Модальное окно для QR */
+        /* ====== МОДАЛЬНЫЕ ОКНА (ОБЩИЕ) ====== */
         .modal {
             display: none;
             position: fixed;
@@ -355,8 +264,8 @@
             background: white;
             border-radius: 1.5rem;
             padding: 2rem;
-            width: 100%; /* Добавить эту строку */
-            max-width: 380px; /* Это значение переопределяется в HTML для PDF окна (900px) */
+            width: 100%;
+            max-width: 380px; /* По умолчанию для QR-кода */
             text-align: center;
             position: relative;
             animation: pop 0.25s ease-out;
@@ -373,23 +282,26 @@
             cursor: pointer;
             color: #999;
             line-height: 1;
+            z-index: 10;
         }
         .modal-content .close-x:hover { color: #c4452c; }
-        .modal-content h3 {
-            color: #1e4d2b;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
+        .modal-content h3 { color: #1e4d2b; margin-bottom: 1rem; font-size: 1.3rem; }
         .modal-content img {
             width: 100%;
             max-width: 280px;
             border-radius: 0.8rem;
             border: 3px solid #f0f7ed;
         }
-        .modal-content p {
-            color: #5a6b57;
-            font-size: 0.9rem;
-            margin-top: 1rem;
+        .modal-content p { color: #5a6b57; font-size: 0.9rem; margin-top: 1rem; }
+
+        /* Специфичные стили для окна PDF (расширяем его) */
+        #pdf-modal .modal-content {
+            max-width: 900px; 
+            height: 90vh; 
+            padding: 1.5rem; 
+            display: flex; 
+            flex-direction: column; 
+            text-align: left;
         }
 
         footer {
@@ -412,6 +324,7 @@
             .choice-card { padding: 1.5rem 1.3rem; }
             .choice-card h3 { font-size: 1.15rem; }
             .emergency-strip { grid-template-columns: 1fr 1fr; }
+            #pdf-modal .modal-content { padding: 1rem; }
         }
     </style>
 </head>
@@ -448,7 +361,7 @@
                 <span class="btn"><i class="fas fa-arrow-right"></i> Читать на сайте</span>
             </a>
 
-            <!-- Карточка 2: Культура (вместо PDF) -->
+            <!-- Карточка 2: Культура -->
             <a href="culture.html" class="choice-card">
                 <i class="fas fa-mask"></i>
                 <h3>Культура и этикет</h3>
@@ -460,18 +373,18 @@
         <!-- Превью брошюры -->
         <div class="preview">
             <h2><i class="fas fa-file-pdf"></i> PDF-брошюра</h2>
-            <p class="preview-sub">Красивая вёрстка с фотографиями. Скачайте, чтобы гид был доступен в офлайн-режиме.</p>
+            <p class="preview-sub">Красивая вёрстка с фотографиями. Нажмите на обложку, чтобы почитать онлайн, или скачайте файл.</p>
             
             <div class="preview-img-wrap" onclick="openPDF()" style="cursor: pointer;" title="Нажмите, чтобы посмотреть онлайн">
                 <img src="brochure.png" alt="Обложка PDF-брошюры">
-        </div>
+            </div>
             
             <a href="brochure.pdf" download class="download-link">
                 <i class="fas fa-download"></i> Скачать брошюру (PDF)
             </a>
         </div>
         
-        <!-- БЛОК ЭКСТРЕННЫХ КОНТАКТОВ (ПЕРЕНЕСЕН СЮДА) -->
+        <!-- БЛОК ЭКСТРЕННЫХ КОНТАКТОВ -->
         <div class="emergency-section">
             <h2 class="section-title"><i class="fas fa-phone-alt"></i> Контакты служб</h2>
             <p class="section-sub">Сохраните эти номера заранее — в экстренной ситуации может быть не до поиска в интернете.</p>
@@ -490,7 +403,7 @@
                     <span class="label">Пожарная</span>
                 </div>
                 <div class="emergency-card">
-                    <span class="num">+55&nbsp;(21) 96681-8105</span>
+                    <span class="num" style="font-size: 1.1rem; margin-top: 0.3rem;">+55 (21)<br>96681-8105</span>
                     <span class="label">Консульство РФ</span>
                 </div>
             </div>
@@ -506,16 +419,26 @@
 
     <footer>
         <i class="fas fa-map-signs"></i> © · 2026 Учебный проект «Бразилия · практическое руководство по безопасности»
-        <p style="opacity:0.7;">ФГБОУ ВО «ЧГУ им. И.Н. Ульянова», историко-географический факультет<br>Автор: Леонтьев Д.А., группа ИГФ-41-23</p>
+        <p style="opacity:0.7; margin-top: 0.5rem;">ФГБОУ ВО «ЧГУ им. И.Н. Ульянова», историко-географический факультет<br>Автор: Леонтьев Д.А., группа ИГФ-41-23</p>
         <br><span style="opacity:0.7;">Разработано в учебных целях</span>
     </footer>
 </div>
 
-<!-- Модальное окно с QR-кодом -->
+<!-- Модальное окно с QR-кодом (ВОЗВРАЩЕНО) -->
+<div id="qr-modal" class="modal" onclick="closeQROnBackdrop(event)">
+    <div class="modal-content">
+        <span class="close-x" onclick="closeQR()">&times;</span>
+        <h3>Поделиться памяткой</h3>
+        <img src="qr-code.png" alt="QR-код на памятку">
+        <p>Наведите камеру телефона,<br>чтобы открыть памятку на другом устройстве</p>
+    </div>
+</div>
+
+<!-- Модальное окно для просмотра PDF -->
 <div id="pdf-modal" class="modal" onclick="closePDFOnBackdrop(event)">
-    <div class="modal-content" style="max-width: 900px; height: 90vh; padding: 1rem; display: flex; flex-direction: column;">
+    <div class="modal-content">
         <span class="close-x" onclick="closePDF()">&times;</span>
-        <h3 style="margin-bottom: 1rem; text-align: left; font-size: 1.2rem;">Просмотр брошюры</h3>
+        <h3 style="margin-bottom: 1rem; font-size: 1.2rem; text-align: left;">Просмотр брошюры</h3>
         
         <!-- Встраиваем PDF -->
         <iframe src="brochure.pdf#toolbar=1" style="width: 100%; flex-grow: 1; border: none; border-radius: 0.5rem; background: #f0f7ed;"></iframe>
@@ -528,7 +451,9 @@
     </div>
 </div>
 
+<!-- ЕДИНЫЙ СКРИПТ (ИСПРАВЛЕНО) -->
 <script>
+    // Функции для QR-кода
     function showQR() {
         document.getElementById('qr-modal').classList.add('active');
     }
@@ -538,26 +463,28 @@
     function closeQROnBackdrop(e) {
         if (e.target.id === 'qr-modal') closeQR();
     }
-    // Закрытие по Esc
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeQR();
-    });
-</script>
 
     // Функции для PDF
     function openPDF() {
         document.getElementById('pdf-modal').classList.add('active');
-        // Блокируем прокрутку фона, пока открыто окно
         document.body.style.overflow = 'hidden';
     }
     function closePDF() {
         document.getElementById('pdf-modal').classList.remove('active');
-        // Возвращаем прокрутку
         document.body.style.overflow = '';
     }
     function closePDFOnBackdrop(e) {
         if (e.target.id === 'pdf-modal') closePDF();
     }
-    
+
+    // Закрытие по Esc для всех окон
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeQR();
+            closePDF();
+        }
+    });
+</script>
+
 </body>
 </html>
