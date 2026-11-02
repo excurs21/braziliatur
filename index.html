@@ -355,8 +355,8 @@
             background: white;
             border-radius: 1.5rem;
             padding: 2rem;
-            max-width: 380px;
-            width: 100%;
+            width: 100%; /* Добавить эту строку */
+            max-width: 380px; /* Это значение переопределяется в HTML для PDF окна (900px) */
             text-align: center;
             position: relative;
             animation: pop 0.25s ease-out;
@@ -462,9 +462,9 @@
             <h2><i class="fas fa-file-pdf"></i> PDF-брошюра</h2>
             <p class="preview-sub">Красивая вёрстка с фотографиями. Скачайте, чтобы гид был доступен в офлайн-режиме.</p>
             
-            <div class="preview-img-wrap">
+            <div class="preview-img-wrap" onclick="openPDF()" style="cursor: pointer;" title="Нажмите, чтобы посмотреть онлайн">
                 <img src="brochure.png" alt="Обложка PDF-брошюры">
-            </div>
+        </div>
             
             <a href="brochure.pdf" download class="download-link">
                 <i class="fas fa-download"></i> Скачать брошюру (PDF)
@@ -512,12 +512,19 @@
 </div>
 
 <!-- Модальное окно с QR-кодом -->
-<div id="qr-modal" class="modal" onclick="closeQROnBackdrop(event)">
-    <div class="modal-content">
-        <span class="close-x" onclick="closeQR()">&times;</span>
-        <h3>Поделиться памяткой</h3>
-        <img src="qr-code.png" alt="QR-код на памятку">
-        <p>Наведите камеру телефона,<br>чтобы открыть памятку на другом устройстве</p>
+<div id="pdf-modal" class="modal" onclick="closePDFOnBackdrop(event)">
+    <div class="modal-content" style="max-width: 900px; height: 90vh; padding: 1rem; display: flex; flex-direction: column;">
+        <span class="close-x" onclick="closePDF()">&times;</span>
+        <h3 style="margin-bottom: 1rem; text-align: left; font-size: 1.2rem;">Просмотр брошюры</h3>
+        
+        <!-- Встраиваем PDF -->
+        <iframe src="brochure.pdf#toolbar=1" style="width: 100%; flex-grow: 1; border: none; border-radius: 0.5rem; background: #f0f7ed;"></iframe>
+        
+        <div style="margin-top: 1rem; text-align: center;">
+            <a href="brochure.pdf" download style="display: inline-flex; align-items: center; gap: 0.5rem; background: #c4452c; color: white; padding: 0.6rem 1.5rem; border-radius: 40px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">
+                <i class="fas fa-download"></i> Скачать на устройство
+            </a>
+        </div>
     </div>
 </div>
 
@@ -537,5 +544,20 @@
     });
 </script>
 
+    // Функции для PDF
+    function openPDF() {
+        document.getElementById('pdf-modal').classList.add('active');
+        // Блокируем прокрутку фона, пока открыто окно
+        document.body.style.overflow = 'hidden';
+    }
+    function closePDF() {
+        document.getElementById('pdf-modal').classList.remove('active');
+        // Возвращаем прокрутку
+        document.body.style.overflow = '';
+    }
+    function closePDFOnBackdrop(e) {
+        if (e.target.id === 'pdf-modal') closePDF();
+    }
+    
 </body>
 </html>
