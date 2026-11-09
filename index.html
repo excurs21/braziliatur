@@ -12,6 +12,7 @@
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
             font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
             background: #f4f7f2;
@@ -19,6 +20,7 @@
             line-height: 1.5;
             padding: 2rem 1rem;
         }
+        
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -28,6 +30,8 @@
             overflow: hidden;
             border: 1px solid #d9e6d4;
         }
+        
+        /* ====== ШАПКА ====== */
         header {
             background: linear-gradient(rgba(30, 77, 43, 0.88), rgba(30, 77, 43, 0.4)),
                         url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1920&q=80')
@@ -85,7 +89,7 @@
             font-size: 1rem;
         }
 
-        /* ====== ДВЕ БОЛЬШИЕ КАРТОЧКИ ====== */
+        /* ====== КАРТОЧКИ ВЫБОРА ФОРМАТА ====== */
         .choice-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -140,54 +144,116 @@
         }
         .choice-card:hover .btn { background: #2a6e3a; }
 
-        /* ====== ПРЕВЬЮ PDF ====== */
-        .preview {
-            background: #f0f7ed;
-            border-radius: 1.5rem;
-            padding: 2rem;
+        /* ====== ДВА БУКЛЕТА PDF ====== */
+        .brochure-section {
             margin-bottom: 3rem;
             text-align: center;
         }
-        .preview h2 {
-            color: #1e4d2b;
-            font-size: 1.6rem;
-            margin-bottom: 0.5rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
+        
+        .brochure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
-        .preview h2 i { color: #c4452c; }
-        .preview .preview-sub {
-            color: #5a6b57;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
+
+        .brochure-card {
+            background: #f9fcf7;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid #deecda;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+        
+        .brochure-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(30, 77, 43, 0.1);
+        }
+
         .preview-img-wrap {
-            max-width: 420px;
-            margin: 0 auto;
+            position: relative;
             border-radius: 1rem;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 40, 0, 0.15);
+            box-shadow: 0 8px 20px rgba(0, 40, 0, 0.1);
             border: 4px solid white;
-            transition: transform 0.3s;
+            cursor: pointer;
+            margin-bottom: 1rem;
         }
-        .preview-img-wrap:hover { transform: scale(1.03) rotate(-1deg); }
-        .preview-img-wrap img { width: 100%; display: block; }
-        .preview .download-link {
+        
+        .preview-img-wrap img {
+            width: 100%;
+            display: block;
+            transition: transform 0.4s;
+        }
+        
+        .preview-img-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        .pdf-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(30, 77, 43, 0.9);
+            color: #f9c74f;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .brochure-card h3 {
+            color: #1e4d2b;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .brochure-card p {
+            color: #5a6b57;
+            font-size: 0.9rem;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .brochure-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn-view, .btn-download {
             display: inline-flex;
             align-items: center;
-            gap: 0.6rem;
-            margin-top: 1.5rem;
-            background: #c4452c;
-            color: white;
-            padding: 0.8rem 1.7rem;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 40px;
-            text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
-            transition: background 0.2s;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            font-family: inherit;
         }
-        .preview .download-link:hover { background: #a8361f; }
+
+        .btn-view {
+            background: #1e4d2b;
+            color: white;
+        }
+        .btn-view:hover { background: #2a6e3a; }
+
+        .btn-download {
+            background: white;
+            color: #c4452c;
+            border: 2px solid #c4452c;
+        }
+        .btn-download:hover { background: #c4452c; color: white; }
 
         /* ====== ЭКСТРЕННЫЕ КОНТАКТЫ ====== */
         .emergency-section { margin-bottom: 2.5rem; }
@@ -247,7 +313,7 @@
         }
         .share-btn i { color: #f9c74f; }
 
-        /* ====== МОДАЛЬНЫЕ ОКНА (ОБЩИЕ) ====== */
+        /* ====== МОДАЛЬНЫЕ ОКНА ====== */
         .modal {
             display: none;
             position: fixed;
@@ -260,20 +326,23 @@
             padding: 1rem;
         }
         .modal.active { display: flex; }
+        
         .modal-content {
             background: white;
             border-radius: 1.5rem;
             padding: 2rem;
             width: 100%;
-            max-width: 380px; /* По умолчанию для QR-кода */
+            max-width: 380px; /* Для QR-кода */
             text-align: center;
             position: relative;
             animation: pop 0.25s ease-out;
         }
+        
         @keyframes pop {
             from { transform: scale(0.85); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
+        
         .modal-content .close-x {
             position: absolute;
             top: 0.7rem;
@@ -294,7 +363,7 @@
         }
         .modal-content p { color: #5a6b57; font-size: 0.9rem; margin-top: 1rem; }
 
-        /* Специфичные стили для окна PDF (расширяем его) */
+        /* Специфичные стили для окна PDF */
         #pdf-modal .modal-content {
             max-width: 900px; 
             height: 90vh; 
@@ -304,6 +373,7 @@
             text-align: left;
         }
 
+        /* ====== ПОДВАЛ ====== */
         footer {
             background: #1e3a1e;
             color: #cbdcc2;
@@ -314,6 +384,7 @@
         }
         footer i { color: #f9c74f; margin: 0 0.3rem; }
 
+        /* ====== АДАПТИВ ====== */
         @media (max-width: 600px) {
             header { padding: 2.5rem 1.2rem 2rem; }
             header h1 { font-size: 1.7rem; }
@@ -325,6 +396,7 @@
             .choice-card h3 { font-size: 1.15rem; }
             .emergency-strip { grid-template-columns: 1fr 1fr; }
             #pdf-modal .modal-content { padding: 1rem; }
+            .brochure-actions { flex-direction: column; }
         }
     </style>
 </head>
@@ -348,7 +420,7 @@
 
     <main>
 
-        <!-- Две карточки выбора -->
+        <!-- Две карточки выбора формата (Текст и Культура) -->
         <h2 class="section-title"><i class="fas fa-compass"></i> Выберите формат</h2>
         <p class="section-sub">Текстовая версия для чтения с телефона, PDF — для печати и сохранения.</p>
 
@@ -370,18 +442,50 @@
             </a>
         </div>
 
-        <!-- Превью брошюры -->
-        <div class="preview">
-            <h2><i class="fas fa-file-pdf"></i> PDF-брошюра</h2>
-            <p class="preview-sub">Красивая вёрстка с фотографиями. Нажмите на обложку, чтобы почитать онлайн, или скачайте файл.</p>
+        <!-- Блок с ДВУМЯ PDF-буклетами -->
+        <div class="brochure-section">
+            <h2 class="section-title"><i class="fas fa-file-pdf"></i> PDF-буклеты</h2>
+            <p class="section-sub">Выберите нужный формат: правила безопасности или культурный гид. Нажмите на обложку для просмотра.</p>
             
-            <div class="preview-img-wrap" onclick="openPDF()" style="cursor: pointer;" title="Нажмите, чтобы посмотреть онлайн">
-                <img src="brochure.png" alt="Обложка PDF-брошюры">
+            <div class="brochure-grid">
+                <!-- Буклет 1: Безопасность -->
+                <div class="brochure-card">
+                    <div class="preview-img-wrap" onclick="openPDF('brochure-safety.pdf', 'Буклет: Безопасность')" title="Нажмите, чтобы посмотреть онлайн">
+                        <!-- Убедитесь, что картинка называется brochure-safety.png -->
+                        <img src="brochure-safety.png" alt="Обложка: Безопасность">
+                        <div class="pdf-badge"><i class="fas fa-shield-alt"></i> Безопасность</div>
+                    </div>
+                    <h3>Безопасность</h3>
+                    <p>Экономическая, экологическая и социальная безопасность. Экстренные контакты и законы.</p>
+                    <div class="brochure-actions">
+                        <button onclick="openPDF('brochure-safety.pdf', 'Буклет: Безопасность')" class="btn-view">
+                            <i class="fas fa-eye"></i> Читать
+                        </button>
+                        <a href="brochure-safety.pdf" download class="btn-download">
+                            <i class="fas fa-download"></i> Скачать
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Буклет 2: Страна (Культура) -->
+                <div class="brochure-card">
+                    <div class="preview-img-wrap" onclick="openPDF('brochure-country.pdf', 'Буклет: Культура и природа')" title="Нажмите, чтобы посмотреть онлайн">
+                        <!-- Убедитесь, что картинка называется brochure-country.png -->
+                        <img src="brochure-country.png" alt="Обложка: Культура и природа">
+                        <div class="pdf-badge"><i class="fas fa-globe-americas"></i> Культура</div>
+                    </div>
+                    <h3>Культура и природа</h3>
+                    <p>История, традиции, праздники, гастрономия и португальский разговорник.</p>
+                    <div class="brochure-actions">
+                        <button onclick="openPDF('brochure-country.pdf', 'Буклет: Культура и природа')" class="btn-view">
+                            <i class="fas fa-eye"></i> Читать
+                        </button>
+                        <a href="brochure-country.pdf" download class="btn-download">
+                            <i class="fas fa-download"></i> Скачать
+                        </a>
+                    </div>
+                </div>
             </div>
-            
-            <a href="brochure.pdf" download class="download-link">
-                <i class="fas fa-download"></i> Скачать брошюру (PDF)
-            </a>
         </div>
         
         <!-- БЛОК ЭКСТРЕННЫХ КОНТАКТОВ -->
@@ -403,8 +507,8 @@
                     <span class="label">Пожарная</span>
                 </div>
                 <div class="emergency-card">
-                    <span class="num" style="font-size: 1.1rem; margin-top: 0.3rem;">+55 (61)<br>3223-5094</span>
-                    <span class="label">Консульство РФ (в Бразилиа)</span>
+                    <span class="num" style="font-size: 1.1rem; margin-top: 0.3rem;">+55 (21)<br>96681-8105</span>
+                    <span class="label">Консульство РФ</span>
                 </div>
             </div>
         </div>
@@ -424,14 +528,13 @@
     </footer>
 </div>
 
-<!-- Модальное окно с QR-кодом (ВОЗВРАЩЕНО) -->
+<!-- Модальное окно с QR-кодом -->
 <div id="qr-modal" class="modal" onclick="closeQROnBackdrop(event)">
     <div class="modal-content">
         <span class="close-x" onclick="closeQR()">&times;</span>
         <h3>Поделиться памяткой</h3>
         <img src="qr-code.png" alt="QR-код на памятку">
         <p>Наведите камеру телефона,<br>чтобы открыть памятку на другом устройстве</p>
-        <p>Копировать ссылку<br>https://excurs21.github.io/braziliatur/index.html</p>
     </div>
 </div>
 
@@ -439,46 +542,66 @@
 <div id="pdf-modal" class="modal" onclick="closePDFOnBackdrop(event)">
     <div class="modal-content">
         <span class="close-x" onclick="closePDF()">&times;</span>
-        <h3 style="margin-bottom: 1rem; font-size: 1.2rem; text-align: left;">Просмотр брошюры</h3>
+        <h3 id="pdf-modal-title" style="margin-bottom: 1rem; font-size: 1.2rem; text-align: left;">Просмотр брошюры</h3>
         
-        <!-- Встраиваем PDF -->
-        <iframe src="brochure.pdf#toolbar=1" style="width: 100%; flex-grow: 1; border: none; border-radius: 0.5rem; background: #f0f7ed;"></iframe>
+        <!-- Сюда будет подставляться ссылка на выбранный PDF -->
+        <iframe id="pdf-iframe" src="" style="width: 100%; flex-grow: 1; border: none; border-radius: 0.5rem; background: #f0f7ed;"></iframe>
         
         <div style="margin-top: 1rem; text-align: center;">
-            <a href="brochure.pdf" download style="display: inline-flex; align-items: center; gap: 0.5rem; background: #c4452c; color: white; padding: 0.6rem 1.5rem; border-radius: 40px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">
+            <a id="pdf-download-link" href="" download style="display: inline-flex; align-items: center; gap: 0.5rem; background: #c4452c; color: white; padding: 0.6rem 1.5rem; border-radius: 40px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">
                 <i class="fas fa-download"></i> Скачать на устройство
             </a>
         </div>
     </div>
 </div>
 
-<!-- ЕДИНЫЙ СКРИПТ -->
 <script>
-    // Функции для QR-кода
+    // ====== ФУНКЦИИ ДЛЯ QR-КОДА ======
     function showQR() {
         document.getElementById('qr-modal').classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
     function closeQR() {
         document.getElementById('qr-modal').classList.remove('active');
+        document.body.style.overflow = '';
     }
     function closeQROnBackdrop(e) {
         if (e.target.id === 'qr-modal') closeQR();
     }
 
-    // Функции для PDF
-    function openPDF() {
-        document.getElementById('pdf-modal').classList.add('active');
+    // ====== ФУНКЦИИ ДЛЯ PDF ======
+    function openPDF(pdfFile, title) {
+        const modal = document.getElementById('pdf-modal');
+        const iframe = document.getElementById('pdf-iframe');
+        const modalTitle = document.getElementById('pdf-modal-title');
+        const downloadLink = document.getElementById('pdf-download-link');
+
+        // Устанавливаем нужные данные для выбранного буклета
+        iframe.src = pdfFile;
+        modalTitle.textContent = title;
+        downloadLink.href = pdfFile;
+
+        // Открываем окно и блокируем прокрутку фона
+        modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
+    
     function closePDF() {
-        document.getElementById('pdf-modal').classList.remove('active');
+        const modal = document.getElementById('pdf-modal');
+        const iframe = document.getElementById('pdf-iframe');
+        
+        modal.classList.remove('active');
         document.body.style.overflow = '';
+        
+        // Очищаем iframe с задержкой, чтобы при следующем открытии не мигала старая картинка
+        setTimeout(() => { iframe.src = ''; }, 300);
     }
+    
     function closePDFOnBackdrop(e) {
         if (e.target.id === 'pdf-modal') closePDF();
     }
 
-    // Закрытие по Esc для всех окон
+    // ====== ЗАКРЫТИЕ ПО ESC ======
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeQR();
